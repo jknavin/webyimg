@@ -17,4 +17,4 @@
 
 ## Notes
 AVIF encoding depends on browser support. If unavailable, the app automatically falls back to WebP.
-The ZIP writer intentionally uses the ZIP "store" method so the extension has no third-party runtime dependency. Images themselves are already encoded/compressed by the selected image format.
+The ZIP writer intentionally uses the ZIP "store" method so the it has no third-party runtime dependency. Images themselves are already encoded/compressed by the selected image format.
