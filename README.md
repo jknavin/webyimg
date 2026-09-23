@@ -1,6 +1,6 @@
 # Image Converter & Compressor
 
-Manifest V3 Chrome/Edge extension. All image processing happens locally in the browser.
+ All image processing happens locally in the browser.
 
 ## Features
 - JPG/JPEG, PNG, WebP, GIF, BMP, SVG and other browser-readable inputs
@@ -13,13 +13,7 @@ Manifest V3 Chrome/Edge extension. All image processing happens locally in the b
 - Download all as a ZIP
 - No network requests and no uploaded images
 
-## Install in Microsoft Edge
-1. Extract the ZIP.
-2. Open `edge://extensions`.
-3. Enable Developer mode.
-4. Choose **Load unpacked**.
-5. Select the extracted `image-converter-compressor` folder.
-6. Click the extension icon. It opens the offline image tool in a new tab.
+
 
 ## Notes
 AVIF encoding depends on browser support. If unavailable, the app automatically falls back to WebP.
