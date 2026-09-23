@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image Converter & Compressor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>Image Converter & Compressor</h1>
+    <p>Fast, private image processing — everything runs locally in your browser.</p>
+  </div>
+  <span class="privacy">● Offline & Private</span>
+</header>
+
+<main>
+  <section id="dropZone" class="drop-zone">
+    <div class="drop-icon">＋</div>
+    <h2>Drop images here</h2>
+    <p>or choose files from your computer</p>
+    <input id="fileInput" type="file" multiple accept="image/*">
+    <button id="chooseBtn" class="primary">Choose Images</button>
+    <small>JPG, JPEG, PNG, WebP, GIF, BMP, SVG and browser-supported image formats</small>
+  </section>
+
+  <section id="controls" class="panel hidden">
+    <div class="control-grid">
+      <label>
+        Output format
+        <select id="format">
+          <option value="image/webp">WebP</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/png">PNG</option>
+          <option value="image/avif">AVIF (if supported)</option>
+        </select>
+      </label>
+
+      <label>
+        Quality <span id="qualityValue">82%</span>
+        <input id="quality" type="range" min="10" max="100" value="82">
+      </label>
+
+      <label>
+        Max width
+        <input id="maxWidth" type="number" min="1" placeholder="Original">
+      </label>
+
+      <label>
+        Max height
+        <input id="maxHeight" type="number" min="1" placeholder="Original">
+      </label>
+
+      <label class="check">
+        <input id="keepRatio" type="checkbox" checked>
+        Keep aspect ratio
+      </label>
+
+      <label class="check">
+        <input id="stripMeta" type="checkbox" checked>
+        Remove metadata
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="processBtn" class="primary">Convert & Compress</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+  </section>
+
+  <section id="results" class="panel hidden">
+    <div class="results-head">
+      <h2>Results</h2>
+      <button id="downloadAllBtn" class="secondary">Download All as ZIP</button>
+    </div>
+    <div id="resultList"></div>
+  </section>
+
+  <section class="info">
+    <div><strong>🔒 Private</strong><span>Your images never leave this device.</span></div>
+    <div><strong>⚡ Offline</strong><span>No server or internet connection required.</span></div>
+    <div><strong>📦 Batch</strong><span>Process multiple images at once.</span></div>
+  </section>
+</main>
+
+<script src="zip.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
